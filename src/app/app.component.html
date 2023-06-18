@@ -1,0 +1,21 @@
+<div class="home-page">
+  <h1>Home Page</h1>
+  <!-- Display pictures of founders -->
+  <div class="founders-section">
+    <h2>Founders</h2>
+<!--    <img src="founder1.jpg" alt="Founder 1">-->
+<!--    <img src="founder2.jpg" alt="Founder 2">-->
+  </div>
+  <form class="form-container">
+    <textarea [(ngModel)]="newReview" name="newReview"  placeholder="Write your review"></textarea>
+    <button type="submit" (click)="submitReview()">Submit</button>
+  </form>
+  <div class="reviews-container">
+    <h2>Reviews:</h2>
+    <ul>
+      <li *ngFor="let review of reviews">{{ review.review }}</li>
+    </ul>
+  </div>
+</div>
+
+<!--<router-outlet></router-outlet>-->
